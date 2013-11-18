@@ -1,0 +1,74 @@
+\select@language {french}
+\ttl@starttoc {sections@1}
+\contentsline {section}{\numberline {}Introduction}{6}
+\contentsline {section}{\numberline {1}Bases du projet}{7}
+\contentsline {subsection}{\numberline {1.1}Pr\'esentation de notre organisation}{7}
+\contentsline {subsubsection}{\numberline {1.1.1}Communication au sein du groupe}{7}
+\contentsline {subsubsection}{\numberline {1.1.2}Subversion}{7}
+\contentsline {subsection}{\numberline {1.2}Pr\'esentation du jeu}{8}
+\contentsline {subsection}{\numberline {1.3}D\'efinition du plateau de jeu}{9}
+\contentsline {subsubsection}{\numberline {1.3.1}Architecture d'un processeur}{9}
+\contentsline {paragraph}{Registres}{9}
+\contentsline {paragraph}{M\'emoire RAM}{9}
+\contentsline {paragraph}{Structure processeur}{9}
+\contentsline {subsubsection}{\numberline {1.3.2}Description du plateau}{10}
+\contentsline {subsection}{\numberline {1.4}Construction des adresses}{10}
+\contentsline {subsection}{\numberline {1.5}Gestion des \'ecritures}{11}
+\contentsline {paragraph}{Listes d'adresses}{11}
+\contentsline {subsection}{\numberline {1.6}Dynamique du jeu}{13}
+\contentsline {paragraph}{Conclusion partielle}{13}
+\contentsline {section}{\numberline {2}Le coeur du projet : la dynamique du processeur}{14}
+\contentsline {subsection}{\numberline {2.1}Dynamique de fonctionnement du processeur}{14}
+\contentsline {subsubsection}{\numberline {2.1.1}Registres et adresses r\'eserv\'ees}{14}
+\contentsline {paragraph}{Registres}{14}
+\contentsline {paragraph}{Adresse r\'eserv\'ees}{15}
+\contentsline {subsubsection}{\numberline {2.1.2}Timer}{15}
+\contentsline {subsubsection}{\numberline {2.1.3}Gestion des ``\'ev\`enements'' ou interruptions}{15}
+\contentsline {paragraph}{Plusieurs types d'interruption}{15}
+\contentsline {paragraph}{Dynamique du processeur}{17}
+\contentsline {subsection}{\numberline {2.2}Ex\'ecution d'une instruction}{17}
+\contentsline {subsubsection}{\numberline {2.2.1}Repr\'esentation des instructions en machine}{17}
+\contentsline {subsubsection}{\numberline {2.2.2}Conception}{18}
+\contentsline {subsubsection}{\numberline {2.2.3}D\'ecodage d'un mot : les commandes}{19}
+\contentsline {paragraph}{Comportement d'une commande}{19}
+\contentsline {paragraph}{D\'ecodage d'une commande}{20}
+\contentsline {subsubsection}{\numberline {2.2.4}D\'ecodage d'un mot : les op\'erandes}{21}
+\contentsline {paragraph}{Comportement d'une fonction op\'erande :}{21}
+\contentsline {paragraph}{D\'ecodage des op\'erandes}{21}
+\contentsline {paragraph}{Avantages et limites de la solution adopt\'ee}{22}
+\contentsline {paragraph}{Conclusion partielle}{22}
+\contentsline {section}{\numberline {3}Les aspects additionnels}{23}
+\contentsline {subsection}{\numberline {3.1}Interface graphique}{23}
+\contentsline {subsubsection}{\numberline {3.1.1}Le choix de GTK+}{23}
+\contentsline {subsubsection}{\numberline {3.1.2}Le choix de Glade}{24}
+\contentsline {subsubsection}{\numberline {3.1.3}CodeWar en mode graphique}{24}
+\contentsline {paragraph}{Exploitation du code XML g\'en\'er\'e par Glade}{24}
+\contentsline {paragraph}{Les Signaux}{25}
+\contentsline {paragraph}{Int\'egration graphique sur le coeur du programme}{25}
+\contentsline {subparagraph}{Le plateau de Jeu}{25}
+\contentsline {subparagraph}{Chargement des donn\'ees}{25}
+\contentsline {subparagraph}{Mise \`a jour du plateau}{26}
+\contentsline {subsection}{\numberline {3.2}La compilation crois\'ee}{27}
+\contentsline {paragraph}{Conclusion partielle}{27}
+\contentsline {section}{\numberline {}Conclusion}{28}
+\contentsline {section}{\numberline {}Annexes}{29}
+\ttl@stoptoc {sections@1}
+\ttl@starttoc {sections@2}
+\contentsline {section}{\numberline {A}Types de mots}{30}
+\contentsline {subsection}{\numberline {A.1}Mot repr\'esentant un adressage direct}{30}
+\contentsline {subsection}{\numberline {A.2}Mot repr\'esentant une instruction \`a 0 op\'erande}{30}
+\contentsline {subsection}{\numberline {A.3}Mot repr\'esentant une instruction \`a 1 op\'erande}{30}
+\contentsline {subsection}{\numberline {A.4}Mot repr\'esentant une instruction \`a 2 op\'erandes}{30}
+\contentsline {subsection}{\numberline {A.5}Mot repr\'esentant un MOVE}{31}
+\contentsline {section}{\numberline {B}Tableau des adresses r\'eserv\'ees}{31}
+\contentsline {section}{\numberline {C}Liste des instructions ou Grammaire des commandes}{31}
+\contentsline {section}{\numberline {D}Grammaire des op\'erandes}{32}
+\contentsline {section}{\numberline {E}Automate}{32}
+\contentsline {section}{\numberline {F}Champs de bits et unions}{32}
+\contentsline {section}{\numberline {G}Graphisme}{34}
+\contentsline {subsection}{\numberline {G.1}Le Builder}{34}
+\contentsline {subsection}{\numberline {G.2}R\'ecuperer les \'el\'ements graphiques}{34}
+\contentsline {subsection}{\numberline {G.3}Association d'un signal \`a un slot}{34}
+\contentsline {subsection}{\numberline {G.4}Dynamique de l'interface graphique}{35}
+\contentsline {subsection}{\numberline {G.5}Aper\c cu du r\'esultat}{36}
+\contentsfinish 

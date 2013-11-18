@@ -1,0 +1,12 @@
+============================ CodeWar : Compilation ===========================
+
+Pour compiler ce projet vous aurez besoin de l'utilitaire cmake qui permet de générer des makefile.
+
+à partir du répertoire salingue_vandecappelle, effectuer les commandes : 
+
+mkdir build
+cd build
+cmake ..
+make
+
+

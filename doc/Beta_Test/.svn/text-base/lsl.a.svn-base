@@ -1,0 +1,6 @@
+LSL R0,R1
+LSL (R0),R2
+LSL -(R0),R3
+LSL (R0)+,R4
+LSL #10,R5
+
