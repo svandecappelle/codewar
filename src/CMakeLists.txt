@@ -22,10 +22,17 @@ add_definitions(${GOBJECT_CFLAGS_OTHER})
 add_executable(
 			main
 			main.cpp
+
 			codewar.h
 			codewar.cpp
-			window/window.h
-			window/window.cpp
+			
+			ui/window.h
+			ui/window.cpp
+			ui/IsWidget.h
+			ui/IsWidget.cpp
+
+			ui/game/Board.h
+			ui/game/Board.cpp
 		)
 
 target_link_libraries( main ${GTK3_LIBRARIES})

@@ -1,4 +1,4 @@
-#include "window/window.h"
+#include "ui/window.h"
 #include "codewar.h"
 
 Codewar::Codewar(int c, char** v){
