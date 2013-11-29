@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "../definitions.h"
-#include "typage_operande.h"
+#include "operand.h"
 #include "../launch/modifications.h"
-#include "commandes.h"
+#include "commands.h"
 
 
 typedef unsigned short int (*operande)(unsigned short int mot,processeur *p);

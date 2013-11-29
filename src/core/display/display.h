@@ -1,6 +1,6 @@
-#ifndef AFFICHAGE_H
-#define AFFICHAGE_H
-#include "affichage.h"
+#ifndef DISPLAY_H
+#define DISPLAY_H
+#include "display.h"
 
 #include "../definitions.h"
 

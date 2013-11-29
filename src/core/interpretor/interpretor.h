@@ -1,7 +1,6 @@
-/*interpreteur.h*/
-#ifndef INTERPRETEUR_H
-#define INTERPRETEUR_H
-#include "interpreteur.h"
+#ifndef INTERPRETOR_H
+#define INTERPRETOR_H
+#include "interpretor.h"
 
 
 #include "../definitions.h"

@@ -1,7 +1,7 @@
 add_definitions(
   -W
-  #-pedantic
-  #-Wall
+  -pedantic
+  -Wall
 )
 
 set(CMAKE_CXX_FLAGS "-g -Wall")

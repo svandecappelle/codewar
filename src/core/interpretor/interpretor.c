@@ -3,10 +3,10 @@
 #include <unistd.h>
 
 #include "../definitions.h"
-#include "commandes.h"
+#include "commands.h"
 #include "../launch/modifications.h"
 #include "../debug/debug.h"
-#include "../affichage/affichage.h"
+#include "../display/display.h"
 
 /*Déclaration de la liste des commandes à exécuter*/
 /*cette liste est contenue dans un tableau de pointeurs sur une commande*/

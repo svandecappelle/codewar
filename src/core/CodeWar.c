@@ -3,7 +3,7 @@
 #include <time.h>
 #include <string.h>
 #include "definitions.h"
-#include "interpreteur/interpreteur.h"
+#include "interpretor/interpretor.h"
 
 
 int main(int argc, char *argv[]){

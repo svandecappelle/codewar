@@ -1,6 +1,6 @@
-#ifndef COMMANDES_H
-#define COMMANDES_H
-#include "commandes.h"
+#ifndef COMMANDS_H
+#define COMMANDS_H
+#include "commands.h"
 
 
 #include "../definitions.h"

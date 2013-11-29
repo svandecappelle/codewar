@@ -1,7 +1,7 @@
 add_definitions(
   -W
-  #-pedantic
-  #-Wall
+  -pedantic
+  -Wall
 )
 
 find_library(M_LIB m)
@@ -12,19 +12,19 @@ add_executable(Terminal
 		launch/modifications.h
 		launch/modifications.c
 
-		interpreteur/arguments.h
-		interpreteur/arguments.c
-		interpreteur/commandes.h
-		interpreteur/commandes.c
-		interpreteur/flags.h
-		interpreteur/flags.c
-		interpreteur/interpreteur.h
-		interpreteur/interpreteur.c
-		interpreteur/typage_operande.h
-		interpreteur/typage_operande.c
+		interpretor/arguments.h
+		interpretor/arguments.c
+		interpretor/commands.h
+		interpretor/commands.c
+		interpretor/flags.h
+		interpretor/flags.c
+		interpretor/interpretor.h
+		interpretor/interpretor.c
+		interpretor/operand.h
+		interpretor/operand.c
 
-		affichage/affichage.h
- 		affichage/affichage.c
+		display/display.h
+ 		display/display.c
 		
 		debug/debug.h 
 		debug/debug.c

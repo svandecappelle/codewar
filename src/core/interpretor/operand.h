@@ -1,7 +1,6 @@
-/*typage_operande.h*/
-#ifndef TYPAGE_H
-#define TYPAGE_H
-#include "typage_operande.h"
+#ifndef OPERAND_H
+#define OPERAND_H
+#include "operand.h"
 
 #include "../definitions.h"
 
