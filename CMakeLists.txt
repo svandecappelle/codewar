@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project(CODE_WAR C)
+project(CODE_WAR)
 
 find_package (PkgConfig REQUIRED)
 #pkg_check_modules(GTK gtk) # look into FindPkgConfig.cmake, 
@@ -21,4 +21,4 @@ find_package (PkgConfig REQUIRED)
 #target_link_libraries( ${CODE_WAR} gtk-3)
 
 add_subdirectory(src)
-add_subdirectory(terminal) 
+add_subdirectory(src/core) 

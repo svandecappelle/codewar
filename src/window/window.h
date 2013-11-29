@@ -5,11 +5,11 @@
 #include <glib-object.h>
 
 class Window{
-public:
 	GtkWidget *gtkwindow;
-	Window(); // Constructor
- 	~Window(){}; // Destructor
- 	void show();
-};
+	
+	public:
+ 		void show(void);
+ 		Window (int* argc, char*** argv);
+} ;
 
 #endif /* WINDOW_H_ */

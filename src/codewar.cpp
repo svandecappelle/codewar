@@ -1,8 +1,12 @@
 #include "window/window.h"
-#include "window/window.h"
 #include "codewar.h"
 
+Codewar::Codewar(int c, char** v){
+	argc = c;
+	argv = v;
+}
+
 void Codewar::start(){
-	Window win;
+	Window win (&argc, &argv);
  	win.show();
 }

@@ -3,8 +3,10 @@
 
 
 class Codewar{
-
+	int argc;
+	char** argv;
 public:
+	Codewar (int argc,char** argv);
 	void start();
 };
 

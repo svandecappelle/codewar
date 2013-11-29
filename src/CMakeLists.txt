@@ -4,6 +4,10 @@ add_definitions(
   #-Wall
 )
 
+set(CMAKE_CXX_FLAGS "-g -Wall")
+
+
+find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 include_directories(${GTK3_INCLUDE_DIRS})
 link_directories(${GTK3_LIBRARY_DIRS})
@@ -14,6 +18,14 @@ include_directories(${GOBJECT_INCLUDE_DIRS})
 link_directories(${GOBJECT_LIBRARY_DIRS})
 add_definitions(${GOBJECT_CFLAGS_OTHER})
 
-add_executable(Window Window.c)
 
-target_link_libraries( Window gtk-3 gobject-2.0)
+add_executable(
+			main
+			main.cpp
+			codewar.h
+			codewar.cpp
+			window/window.h
+			window/window.cpp
+		)
+
+target_link_libraries( main ${GTK3_LIBRARIES})
