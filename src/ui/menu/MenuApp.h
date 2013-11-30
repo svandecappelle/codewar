@@ -1,15 +1,15 @@
-#ifndef BOARD_H
-#define BOARD_H
+#ifndef MENUAPP_H
+#define MENUAPP_H
 
 #include "../IsWidget.h"
 
 #include <gtk/gtk.h>
 #include <glib-object.h>
 
-class Board: public IsWidget{
+class MenuApp: public IsWidget{
 
 	public:
-		Board();
+		MenuApp();
  		void show(void);
 } ;
 

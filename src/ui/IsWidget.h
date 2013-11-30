@@ -5,8 +5,9 @@
 
 class IsWidget{
 	protected:
-		GtkWidget* widget;
+		
 	public:
+		GtkWidget* widget;
     	GtkWidget* getWidget(void);
 };
 

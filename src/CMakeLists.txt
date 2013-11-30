@@ -31,6 +31,9 @@ add_executable(
 			ui/IsWidget.h
 			ui/IsWidget.cpp
 
+			ui/menu/MenuApp.h
+			ui/menu/MenuApp.cpp
+
 			ui/game/Board.h
 			ui/game/Board.cpp
 		)

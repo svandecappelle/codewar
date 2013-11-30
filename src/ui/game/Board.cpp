@@ -3,7 +3,7 @@
 #include <glib-object.h>
 
 Board::Board(){
-	widget = gtk_label_new("GTK_WINDOW_TOPLEVEL");
+	widget = gtk_label_new("Board");
 }
 
 void Board::show(){
