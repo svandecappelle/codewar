@@ -1,12 +1,14 @@
 ============================ CodeWar : Compilation ===========================
 
-Pour compiler ce projet vous aurez besoin de l'utilitaire cmake qui permet de g�n�rer des makefile.
+Pour compiler ce projet vous aurez besoin de l'utilitaire cmake qui permet de générer des makefile.
 
-� partir du r�pertoire salingue_vandecappelle, effectuer les commandes : 
+à partir du répertoire principal, effectuer les commandes : 
 
 mkdir build
 cd build
 cmake ..
 make
 
-
+Vos executables ont été généré:
+    build/src/main -> En mode Graphique
+    build/src/terminal -> En mode Terminal
