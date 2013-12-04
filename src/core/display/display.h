@@ -1,6 +1,5 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
-#include "display.h"
 
 #include "../definitions.h"
 

@@ -1,12 +1,7 @@
 #ifndef ARGUMENTS_H
 #define ARGUMENTS_H
-#include "arguments.h"
-
-
 
 #include "../definitions.h"
-
-
 
 unsigned short int get_operande_source_0(processeur *p, adresse *ad,mot_move mot, unsigned short int *source);   /* récupère la valeur donnée par une opérande pour la commande MOVE */
 unsigned short int get_operande_source_1(processeur *p, adresse *ad,mot_un_operande mot, unsigned short int *source);   /* récupère la valeur donnée par une opérande pour les commandes à une opérande */

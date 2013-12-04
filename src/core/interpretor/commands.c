@@ -49,8 +49,6 @@ void trap( processeur liste_processeur[][16], adresse *ad){
   processeur *p = &liste_processeur[ad->x][ad->y];
   mot_un_operande mot = *(mot_un_operande *)&p->ram[p->r[PC]%256];
   unsigned short int source;
-  int i;
-
 
   printf("trap\n");
   if(get_operande_source_1_ctrl_prg(p,ad,mot,&source)){
@@ -640,6 +638,7 @@ void jle( processeur liste_processeur[][16], adresse *ad){
 }
 
 void rien( processeur liste_processeur[][16], adresse *ad){
+  printf("rien\n");
 }
 
 

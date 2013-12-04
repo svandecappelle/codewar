@@ -4,6 +4,7 @@
 #include <string.h>
 #include "definitions.h"
 #include "interpretor/interpretor.h"
+#include "launch/modifications.h"
 
 
 int main(int argc, char *argv[]){

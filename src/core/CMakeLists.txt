@@ -1,7 +1,29 @@
 add_definitions(
   -W
   -pedantic
-  -Wall
+  -Waddress
+  -Warray-bounds
+  -Wchar-subscripts
+  -Wimplicit-function-declaration
+  -Wcomment
+  -Wformat
+  -Wmaybe-uninitialized
+  -Wnonnull
+  -Wpointer-sign
+  -Wreturn-type
+  -Wsequence-point
+  -Wstrict-aliasing
+  -Wstrict-overflow=1
+  -Wswitch
+  -Wtrigraphs
+  -Wuninitialized
+  -Wunknown-pragmas
+  -Wunused-function
+  -Wunused-label
+  -Wunused-value
+  -Wvolatile-register-var
+
+  -Wno-overflow
 )
 
 find_library(M_LIB m)

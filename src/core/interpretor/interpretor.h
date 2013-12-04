@@ -1,7 +1,5 @@
 #ifndef INTERPRETOR_H
 #define INTERPRETOR_H
-#include "interpretor.h"
-
 
 #include "../definitions.h"
 

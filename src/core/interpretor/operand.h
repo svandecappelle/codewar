@@ -1,6 +1,5 @@
 #ifndef OPERAND_H
 #define OPERAND_H
-#include "operand.h"
 
 #include "../definitions.h"
 

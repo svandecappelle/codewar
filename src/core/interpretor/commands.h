@@ -1,11 +1,7 @@
 #ifndef COMMANDS_H
 #define COMMANDS_H
-#include "commands.h"
-
 
 #include "../definitions.h"
-
-
 
 void move(processeur liste_processeur[][16], adresse *ad);
 void push(processeur liste_processeur[][16], adresse *ad);
