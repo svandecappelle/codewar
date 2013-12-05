@@ -3,7 +3,7 @@
 #include <glib-object.h>
 
 Board::Board(){
-	widget = gtk_label_new("Board");
+	widget = gtk_button_new_with_label("Board");
 }
 
 void Board::show(){
