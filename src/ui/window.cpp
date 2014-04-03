@@ -21,17 +21,17 @@ Window::Window(int* argc,char*** argv){
 	gtk_box_pack_start(GTK_BOX(vbox), board->getWidget(), FALSE, FALSE, 3);
 	board->show();
 
-	MenuApp* menu;
+	/*MenuApp* menu;
 	menu = new MenuApp();
 	gtk_box_pack_start(GTK_BOX(vbox), menu->getWidget(), FALSE, FALSE, 3);
 	menu->show();
-
+	*/
 	gtk_widget_show(vbox);
 }
 
 void Window::show(){
-	//gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
-  	//gtk_window_set_default_size(GTK_WINDOW(window), 250, 200);
+	gtk_window_set_position(GTK_WINDOW(gtkwindow), GTK_WIN_POS_CENTER);
+  	gtk_window_set_default_size(GTK_WINDOW(gtkwindow), 250, 200);
 	gtk_widget_show(gtkwindow);
 	gtk_main();
 }

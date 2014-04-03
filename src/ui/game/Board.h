@@ -7,6 +7,8 @@
 #include <glib-object.h>
 
 class Board: public IsWidget{
+	const int BOARD_WIDTH = 16;
+	const int BOARD_HEIGHT = 16;
 
 	public:
 		Board();
