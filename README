@@ -12,3 +12,6 @@ make
 Vos executables ont été généré:
     build/src/main -> En mode Graphique
     build/src/terminal -> En mode Terminal
+
+# CI: linked
+on commit
