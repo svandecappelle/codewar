@@ -6,14 +6,25 @@ Pour compiler ce projet vous aurez besoin de l'utilitaire cmake qui permet de g�
 - cmake
 - libgtk-3-dev
 
-à partir du répertoire principal, effectuer les commandes : 
+# Build from sources
 
+## Compilation: 
+
+```
 mkdir build
 cd build
 cmake ..
 make
+```
 
-Vos executables ont été généré:
-    build/src/main -> En mode Graphique
-    build/src/terminal -> En mode Terminal
+ou
 
+```
+./build.sh
+```
+
+## Execute
+```
+    build/src/main -> GUI Mode
+    build/src/terminal -> Terminal Mode
+```
