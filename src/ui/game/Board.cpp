@@ -19,7 +19,7 @@ static void select_color(GtkWidget *widget, gpointer data)
 		GtkWidget *colorSelection;
 
 		colorSelection = gtk_color_selection_dialog_get_color_selection(GTK_COLOR_SELECTION_DIALOG(dialog));
-		
+
 		gtk_color_selection_get_current_rgba(GTK_COLOR_SELECTION(colorSelection), &color);
 		// gtk_widget_override_color(GTK_WIDGET(label), GTK_STATE_NORMAL, &color);
 	}
@@ -38,7 +38,7 @@ Board::Board(){
 		for (int j = 0; j < BOARD_HEIGHT; ++j)
 		{
 			// std::cout << "Board Try insert proc... " << std::endl;
-			GtkWidget *proc = gtk_button_new_with_label("test");
+			GtkWidget *proc = gtk_color_button_new();
 			gtk_widget_show(proc);
 			gtk_grid_attach(GTK_GRID(widget), proc, i , j, 1, 1);
 			// std::cout << "Board Proc inserted. " << std::endl;
@@ -48,10 +48,6 @@ Board::Board(){
 	}
 	// std::cout << "Board builded. " << std::endl;
 }
-
-
-
-
 
 void Board::show(){
 	gtk_widget_show(widget);

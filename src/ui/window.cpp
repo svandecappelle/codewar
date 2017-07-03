@@ -15,17 +15,16 @@ Window::Window(int* argc,char*** argv){
 	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 3);
 	gtk_container_add (GTK_CONTAINER (gtkwindow), vbox);
 
+	MenuApp* menu;
+	menu = new MenuApp();
+	gtk_box_pack_start(GTK_BOX(vbox), menu->getWidget(), FALSE, FALSE, 3);
+	menu->show();
 
 	Board* board;
 	board = new Board();
 	gtk_box_pack_start(GTK_BOX(vbox), board->getWidget(), FALSE, FALSE, 3);
 	board->show();
 
-	/*MenuApp* menu;
-	menu = new MenuApp();
-	gtk_box_pack_start(GTK_BOX(vbox), menu->getWidget(), FALSE, FALSE, 3);
-	menu->show();
-	*/
 	gtk_widget_show(vbox);
 }
 
