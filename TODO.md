@@ -1,40 +1,17 @@
 Nous allons nous servir de ce fichier pour nous communiquer les différents objectifs à  atteindre, le travail fait et à  faire.
 
-#########################################################################################################################################################
-[FAIT GRAPHIQUE]
+# FAIT GRAPHIQUE
 - supprésion du warning de compilation variable extern ;)
 - Avancé un peu sur le rapport.
 
-[A FAIRE...]
+# A FAIRE...
 - signal du bouton "Cancel" dans la fenetre de choix nombre de tours.
 - renvoi de GTK_main apres chaque tour de boucle, pour redonner la main a gtk et ainsi permetre de fermer la fenetre a chaque fin de boucle (tester et c'est pas facile a faire ;) )
 - Fin du rapport avec les Annexes
+
+---
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[FAIT]
+# FAIT
 - Edition de la structure du processeur
 - Conversion d'une valeur codée sur 4 bits en décimal (utile pour l'adressage plateau de jeu)
 - Mise en place du squelette de la gestion des opérandes (tests à effectuer)
@@ -42,39 +19,34 @@ Nous allons nous servir de ce fichier pour nous communiquer les différents objec
 - Codage d'une commande en exemple de ce qui doit être codé
 - Liste des commandes DEJA codées : 
 
-	MOVE
-	PUSH
-	POP
-	ADD
-	CMP
-	SUB
-	LSL	
-	LSR
-	AND
-	OR
-	XOR
-	...
-	BXX
+	- MOVE
+	- PUSH
+	- POP
+	- ADD
+	- CMP
+	- SUB
+	- LSL	
+	- LSR
+	- AND
+	- OR
+	- XOR
+	- ...
+	- BXX
 
 - Commande travaillée actuellement par Grég : BSR
-	
 - Commande travaillée actuellement par Steeve : 
-
-[A FAIRE]
-
 - Commenter encore plus le code ...
 - Conception de la gestion de la mémoire
 - Gestion des timers
 - Gestion des interruptions
 - Recopie d'un fichier binaire dans la ram d'un processeur
 - Gestion de la dynamique du jeu
-#########################################################################################################################################################
 
-Compiler : 
+## Compiler : 
 
 Un Makefile a été créé, pour compiler il suffit de taper la commande "make" dans le répertoire ou sont situées les sources et le Makefile du projet
 
-Décomposition du projet : 
+## Décomposition du projet : 
 
 Le projet sera divisée en plusieurs parties
 	- la dynamique du jeu en (gérée par le source CodeWar.c), 
@@ -97,22 +69,17 @@ Le projet sera divisée en plusieurs parties
 	5) Gestion des cas particuliers : interruptions, Timer, Move si c'est pas déjà fait
 	6) CodeWar, le jeu, le vrai :D
 	
+---
 
-
-
-
-
-
-#########################################################################################################################################################
-Gestion de la mémoire, remarques :
+## Gestion de la mémoire, remarques :
 
 	La mémoire du processeur est composée de 7 registres (plus le registre d'état) et 256 octets de RAM. La gestion de cette mémoire va résider dans la manière de faire transiter l'information provenant d'un registre, d'une constante inscrite dans le programme, ou encore d'une valeur de la pile dans la mémoire à  une adresse donnée.
 
 	L'attribution du mode d'adressage ne sera pas traitée dans cette partie du projet, mais dans la partie "operandes" (on récupère une adresse au même moment dans la dynamique du programme ---> juste avant la création de l'écriture, au niveau de la commande)
 
-#########################################################################################################################################################
+---
 
-Partie "interpréteur de commandes" :
+## Partie "interpréteur de commandes" :
 
 	Dans cette partie, nous avons juste eu à interpréter les 5 bits de poids fort du mot se trouvant à l'adresse PC de la ram du processeur. Nous avons ici opté pour la solution des pointeurs de fonction, sur des fonctions de type :
 
@@ -125,10 +92,9 @@ Partie "interpréteur de commandes" :
 		- get_instruction(1,ad,p) pour tomber sur le push, et ainsi de suite
 
 
-################################################################################################################################################################################################
-Dynamique de création d'une écriture : 
+## Dynamique de création d'une écriture : 
 
-I/   
+### I/
 CodeWar appelle la fonction get_ecriture(short int pc, adresse *ad, processeur *p)  //contenu dans interpreteur.c
 
 interpreteur  appelle une des commandes désignées par le tableau de pointeur de fonction, le type des commandes est : 
@@ -136,7 +102,7 @@ interpreteur  appelle une des commandes désignées par le tableau de pointeur de 
 	short int (*commande)(short int pc, adresse *ad, processeur *p)
 
 
-II/
+### II/
 La commande appelée crée une ecriture en mémoire à l'aide d'un malloc
 
 	ecriture e = (ecriture)malloc(1*sizeof(ecriture));  //Je me réserve en mémoire la place d'une écriture ...
@@ -149,40 +115,34 @@ La commande appelée crée une ecriture en mémoire à l'aide d'un malloc
 Un free(ma_variable_ecriture) sera donc pratiqué à chaque fois qu'une écriture sera appliquée (application de l'écriture en dur dans la mémoire) ou rejetée (cas ou deux processeurs veulent écrire au même endroit).
 
 
+### III/
+la commande appelée va appeler une fonction du type :
+	contenue dans  arguments.c
 
-
-
-
-
-
-III/
-la commande appelée va appeler une fonction du type :      //contenue dans  arguments.c
-
-	short int get_operande_N(short int mot)   //ou     0<=N<=2 avec 0 pour le MOVE
-     					          //			    1 pour les commandes à une opérande
-					          //			    2 pour les commandes à deux opérandes
+	```short int get_operande_N(short int mot)```   
+	où 0<=N<=2 avec 0 pour le MOVE
+    1 pour les commandes à une opérande
+	2 pour les commandes à deux opérandes
 
 
 cette operande sera stockée dans l'attribut valeur de l'écriture (   e->valeur = get_operande_N(mot)    )
 
 
-IV/
+### IV/
 Cette fonction va alors appeler une fonction dy type :	//contenue dans typage_operande.c
 
+	```
 	short int (*operande)(short int mot)
+	```
 
 	(similaire à ce qui a été fait pour la partie interpréteur de commande)
 
-V/
+### V/
 	La gestion de l'adressage est codée dans la partie arguments.c, nous considérons ici qu'à notre niveau, une adresse est un argument. 
 
-					/*Fonction déjà codée */
-  
+## Fonction déjà codée
 
-################################################################################################
-#########################################################
-
-Partie jeu :
+## Partie jeu :
 
 	Cette partie aura pour but de faire tourner 256 processeurs en parallèle. Parmi ces 256 processeurs, deux seront choisis aléatoirement pour se battre entre eux.
 
