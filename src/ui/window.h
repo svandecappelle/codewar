@@ -5,8 +5,8 @@
 #include <glib-object.h>
 
 class Window{
-	GtkWidget *gtkwindow;
-	
+	GtkWidget *window;
+
 	public:
  		void show(void);
  		Window (int* argc, char*** argv);

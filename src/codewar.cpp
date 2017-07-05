@@ -6,7 +6,7 @@ Codewar::Codewar(int c, char** v){
 	argv = v;
 }
 
-void Codewar::start(){
+void Codewar::start(){	
 	Window win (&argc, &argv);
  	win.show();
 }
